@@ -273,8 +273,8 @@ namespace Chess.ChessModels
         public void SetBoard()
         {
             //Sets Black & White Pieces
-            Board[0, 4] = new King();//Kings
-            Board[7, 4] = new King();//Kings
+            Board[0, 4] = new King('d');//Kings
+            Board[7, 4] = new King('l');//Kings
             Board[0, 3] = new Queen('d');//Queens
             Board[7, 3] = new Queen('l');//Queens
             for (int x = 2; x < 6; x+=3)
