@@ -5,6 +5,7 @@ namespace Chess.ChessModels
 {
     public class Bishop : ChessPiece
     {
+        // test 
         public char Color { get; set; }
         public string Piece { get; set; }
         public char Symbol { get; set; }
