@@ -44,27 +44,27 @@ namespace Chess.ChessModels
             switch (piece)
             {
                 case "K":
-                    _pieceHolder = new King(' ');
+                    _pieceHolder = new King();
                     name = _pieceHolder.Piece;
                     break;
                 case "Q":
-                    _pieceHolder = new Queen(' ');
+                    _pieceHolder = new Queen();
                     name = _pieceHolder.Piece;
                     break;
                 case "B":
-                    _pieceHolder = new Bishop(' ');
+                    _pieceHolder = new Bishop();
                     name = _pieceHolder.Piece;
                     break;
                 case "N":
-                    _pieceHolder = new Knight(' ');
+                    _pieceHolder = new Knight();
                     name = _pieceHolder.Piece;
                     break;
                 case "R":
-                    _pieceHolder = new Rook(' ');
+                    _pieceHolder = new Rook();
                     name = _pieceHolder.Piece;
                     break;
                 case "P":
-                    _pieceHolder = new Pawn(' ');
+                    _pieceHolder = new Pawn();
                     name = _pieceHolder.Piece;
                     break;
                 default:
@@ -184,6 +184,7 @@ namespace Chess.ChessModels
             startMove = GrabPiece(square1[0], square1[1]);
             Board[startMove[0], startMove[1]] = _pieceHolder;
             Console.WriteLine(Color + " " + _pieceHolder.Piece + " has been placed at " + square1 + ".");
+            PrintBoard(Board);
         }
         /// <summary>
         /// Moves a piece from it's start location to the desired location.
@@ -272,8 +273,8 @@ namespace Chess.ChessModels
         public void SetBoard()
         {
             //Sets Black & White Pieces
-            Board[0, 4] = new King('d');//Kings
-            Board[7, 4] = new King('l');//Kings
+            Board[0, 4] = new King();//Kings
+            Board[7, 4] = new King();//Kings
             Board[0, 3] = new Queen('d');//Queens
             Board[7, 3] = new Queen('l');//Queens
             for (int x = 2; x < 6; x+=3)
