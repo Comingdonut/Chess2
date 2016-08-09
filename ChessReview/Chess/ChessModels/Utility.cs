@@ -6,10 +6,12 @@ namespace Chess.ChessModels
     public class Utility
     {
         #region Variables
+        // command lengths
         private const int PLACE_PIECE = 4;
         private const int MOVE_PIECE = 5;
         private const int CAPTURE_PIECE = 6;
         private const int KING_SIDE_PIECE = 11;
+
         private string _piece;
         private string _color;
         private ChessPiece[,] _boardSquares;
@@ -142,35 +144,7 @@ namespace Chess.ChessModels
                 default:
                     break;
             }
-            switch (column)
-            {
-                case 'a':
-                    y = 0;
-                    break;
-                case 'b':
-                    y = 1;
-                    break;
-                case 'c':
-                    y = 2;
-                    break;
-                case 'd':
-                    y = 3;
-                    break;
-                case 'e':
-                    y = 4;
-                    break;
-                case 'f':
-                    y = 5;
-                    break;
-                case 'g':
-                    y = 6;
-                    break;
-                case 'h':
-                    y = 7;
-                    break;
-                default:
-                    break;
-            }
+            y = column - 97;
             int[] rowColumns = new int[] { x, y };
             return rowColumns;
         }
@@ -182,9 +156,9 @@ namespace Chess.ChessModels
         public void PlacePiece(string square1)
         {
             startMove = GrabPiece(square1[0], square1[1]);
-            Board[startMove[0], startMove[1]] = _pieceHolder;
+            Squares[startMove[0], startMove[1]] = _pieceHolder;
             Console.WriteLine(Color + " " + _pieceHolder.Piece + " has been placed at " + square1 + ".");
-            PrintBoard(Board);
+            PrintBoard(Squares);
         }
         /// <summary>
         /// Moves a piece from it's start location to the desired location.
@@ -196,13 +170,13 @@ namespace Chess.ChessModels
         {
             startMove = GrabPiece(square1[0], square1[1]);
             endMove = GrabPiece(square2[0], square2[1]);
-            if(Board[startMove[0], startMove[1]].CheckMovement(Board, startMove, endMove) == true)
+            if(Squares[startMove[0], startMove[1]].CheckMovement(Squares, startMove, endMove) == true)
             {
-                if (Board[startMove[0], startMove[1]].CheckSquare(Board, endMove))
+                if (Squares[startMove[0], startMove[1]].CheckSquare(Squares, endMove))
                 {
-                    Board[startMove[0], startMove[1]].MovePiece(Board, startMove, endMove);
+                    Squares[startMove[0], startMove[1]].MovePiece(Squares, startMove, endMove);
                     Console.WriteLine("The piece at " + square1 + " moved to " + square2 + ".");
-                    PrintBoard(Board);
+                    PrintBoard(Squares);
                 }
                 else
                 {
@@ -225,13 +199,13 @@ namespace Chess.ChessModels
         {
             startMove = GrabPiece(square1[0], square1[1]);
             endMove = GrabPiece(square2[0], square2[1]);
-            if (Board[startMove[0], startMove[1]].CheckMovement(Board, startMove, endMove) == true)
+            if (Squares[startMove[0], startMove[1]].CheckMovement(Squares, startMove, endMove) == true)
             {
-                if (Board[startMove[0], startMove[1]].CheckSquare(Board, endMove))
+                if (Squares[startMove[0], startMove[1]].CheckSquare(Squares, endMove))
                 {
-                    Board[startMove[0], startMove[1]].MovePiece(Board, startMove, endMove);
+                    Squares[startMove[0], startMove[1]].MovePiece(Squares, startMove, endMove);
                     Console.WriteLine("The piece at " + square1 + " captured the piece at and moved to " + square2 + ".");
-                    PrintBoard(Board);
+                    PrintBoard(Squares);
                 }
                 else
                 {
@@ -256,12 +230,12 @@ namespace Chess.ChessModels
         {
             startMove = GrabPiece(square1[0], square1[1]);
             endMove = GrabPiece(square2[0], square2[1]);
-            Board[endMove[0], endMove[1]] = Board[startMove[0], startMove[1]];
-            Board[startMove[0], startMove[1]] = new Space();
+            Squares[endMove[0], endMove[1]] = Squares[startMove[0], startMove[1]];
+            Squares[startMove[0], startMove[1]] = new Space();
             startMove = GrabPiece(square3[0], square3[1]);
             endMove = GrabPiece(square4[0], square4[1]);
-            Board[endMove[0], endMove[1]] = Board[startMove[0], startMove[1]];
-            Board[startMove[0], startMove[1]] = new Space();
+            Squares[endMove[0], endMove[1]] = Squares[startMove[0], startMove[1]];
+            Squares[startMove[0], startMove[1]] = new Space();
             Console.WriteLine("King has moved from " + square1 + " to " + square2 + ", rook moved from " + square3 + " to " + square4 + ".");
         }
         #endregion
@@ -273,38 +247,38 @@ namespace Chess.ChessModels
         public void SetBoard()
         {
             //Sets Black & White Pieces
-            Board[0, 4] = new King('d');//Kings
-            Board[7, 4] = new King('l');//Kings
-            Board[0, 3] = new Queen('d');//Queens
-            Board[7, 3] = new Queen('l');//Queens
+            Squares[0, 4] = new King('d');//Kings
+            Squares[7, 4] = new King('l');//Kings
+            Squares[0, 3] = new Queen('d');//Queens
+            Squares[7, 3] = new Queen('l');//Queens
             for (int x = 2; x < 6; x+=3)
             {
-                Board[0, x] = new Bishop('d');//Black Bishops
-                Board[7, x] = new Bishop('l');//White Bishops
+                Squares[0, x] = new Bishop('d');//Black Bishops
+                Squares[7, x] = new Bishop('l');//White Bishops
             }
             for (int x = 1; x < 7; x+=5)
             {
-                Board[0, x] = new Knight('d');//Black Knight
-                Board[7, x] = new Knight('l');//White Knight
+                Squares[0, x] = new Knight('d');//Black Knight
+                Squares[7, x] = new Knight('l');//White Knight
             }
             for (int x = 0; x < 9; x+=7)
             {
-                Board[0, x] = new Rook('d');//Black Rooks
-                Board[7, x] = new Rook('l');//White Rooks
+                Squares[0, x] = new Rook('d');//Black Rooks
+                Squares[7, x] = new Rook('l');//White Rooks
             }
             for (int x = 0; x < 8; x++)
             {
-                Board[1, x] = new Pawn('d');//Black Pawns
-                Board[6, x] = new Pawn('l');//White Pawns
+                Squares[1, x] = new Pawn('d');//Black Pawns
+                Squares[6, x] = new Pawn('l');//White Pawns
             }
             //Empty squares
             for (int x = 0; x < 8; ++x)
             {
                 for (int y = 0; y < 8; y++)
                 {
-                    if (Board[x, y] == null)
+                    if (Squares[x, y] == null)
                     {
-                        Board[x, y] = new Space();
+                        Squares[x, y] = new Space();
                     }
                 }
             }
@@ -403,7 +377,7 @@ namespace Chess.ChessModels
         public int King_Side_Piece { get { return KING_SIDE_PIECE; } }
         public string Piece { get {return _piece; } set {_piece = value; } }
         public string Color { get { return _color; } set { _color = value; } }
-        public ChessPiece[,] Board { get {return _boardSquares; } set {_boardSquares= value; } }
+        public ChessPiece[,] Squares { get {return _boardSquares; } set {_boardSquares= value; } }
         #endregion
         //-----------------------------------------------------------------------------------
     }

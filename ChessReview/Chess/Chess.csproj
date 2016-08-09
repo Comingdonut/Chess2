@@ -45,7 +45,10 @@
   <ItemGroup>
     <Compile Include="ChessControl\Commands.cs" />
     <Compile Include="ChessModels\Bishop.cs" />
+    <Compile Include="ChessModels\ChessBoard.cs" />
+    <Compile Include="ChessModels\ChessColor.cs" />
     <Compile Include="ChessModels\ChessPiece.cs" />
+    <Compile Include="ChessModels\ChessSquare.cs" />
     <Compile Include="ChessModels\King.cs" />
     <Compile Include="ChessModels\Knight.cs" />
     <Compile Include="ChessModels\Pawn.cs" />

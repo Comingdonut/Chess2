@@ -18,7 +18,7 @@ namespace Chess.ChessControl
         /// <param name="line">A line from a file.</param>
         public void ReadLine(string line)
         {
-            util.PrintBoard(util.Board);
+            util.PrintBoard(util.Squares);
             if (line.Length == util.Place_Piece)
             {
                 util.ProcessLine(line, @"([KQBNRP])([ld])([a-h])([1-8])");
