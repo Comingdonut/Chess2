@@ -8,12 +8,11 @@ namespace Chess.ChessModels
 {
     public class ChessBoard
     {
-        ChessSquare[,] Squares;
+        public ChessSquare[,] Squares { get; set; }
         public ChessBoard()
         {
             CreateSquares();
             AddPieces();
-            PrintBoard();
         }
         #region SetBoard
         /// <summary>
@@ -41,29 +40,40 @@ namespace Chess.ChessModels
         public void AddPieces()
         {
             //Sets Black & White Pieces
-            Squares[0, 4].Piece = new King('d');//Kings
-            Squares[7, 4].Piece = new King('l');//Kings
-            Squares[0, 3].Piece = new Queen('d');//Queens
-            Squares[7, 3].Piece = new Queen('l');//Queens
+            Squares[0, 4].Piece = new King(ChessColor.DARK);//Kings
+            Squares[7, 4].Piece = new King(ChessColor.LIGHT);//Kings
+            Squares[0, 3].Piece = new Queen(ChessColor.DARK);//Queens
+            Squares[7, 3].Piece = new Queen(ChessColor.LIGHT);//Queens
             for (int x = 2; x < 6; x += 3)
             {
-                Squares[0, x].Piece = new Bishop('d');//Black Bishops
-                Squares[7, x].Piece = new Bishop('l');//White Bishops
+                Squares[0, x].Piece = new Bishop(ChessColor.DARK);//Black Bishops
+                Squares[7, x].Piece = new Bishop(ChessColor.LIGHT);//White Bishops
             }
             for (int x = 1; x < 7; x += 5)
             {
-                Squares[0, x].Piece = new Knight('d');//Black Knight
-                Squares[7, x].Piece = new Knight('l');//White Knight
+                Squares[0, x].Piece = new Knight(ChessColor.DARK);//Black Knight
+                Squares[7, x].Piece = new Knight(ChessColor.LIGHT);//White Knight
             }
             for (int x = 0; x < 9; x += 7)
             {
-                Squares[0, x].Piece = new Rook('d');//Black Rooks
-                Squares[7, x].Piece = new Rook('l');//White Rooks
+                Squares[0, x].Piece = new Rook(ChessColor.DARK);//Black Rooks
+                Squares[7, x].Piece = new Rook(ChessColor.LIGHT);//White Rooks
             }
             for (int x = 0; x < 8; x++)
             {
-                Squares[1, x].Piece = new Pawn('d');//Black Pawns
-                Squares[6, x].Piece = new Pawn('l');//White Pawns
+                Squares[1, x].Piece = new Pawn(ChessColor.DARK);//Black Pawns
+                Squares[6, x].Piece = new Pawn(ChessColor.LIGHT);//White Pawns
+            }
+            //Empty squares
+            for (int x = 0; x < 8; ++x)
+            {
+                for (int y = 0; y < 8; y++)
+                {
+                    if (Squares[x, y].Piece == null)
+                    {
+                        Squares[x, y].Piece = new Space();
+                    }
+                }
             }
         }
         /// <summary>
@@ -98,7 +108,7 @@ namespace Chess.ChessModels
                     }
                     if (square.Piece != null)
                     {
-                        Console.ForegroundColor = square.Piece.Color == 'l' ? ConsoleColor.White : ConsoleColor.Cyan;
+                        Console.ForegroundColor = square.Piece.Color == ChessColor.LIGHT ? ConsoleColor.White : ConsoleColor.Cyan;
                         Console.Write(" " + square.Piece.Symbol + " ");
                     }
                     else

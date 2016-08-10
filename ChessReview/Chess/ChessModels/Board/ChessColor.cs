@@ -9,6 +9,7 @@ namespace Chess.ChessModels
     public enum ChessColor
     {
         LIGHT,
-        DARK
+        DARK,
+        NONE
     }
 }
