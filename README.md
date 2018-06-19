@@ -6,7 +6,7 @@ The objective of this project is to translate the C# code in [Chess-Console](htt
 More specifically, an iOS application that uses Swift as it's main language.
 
 ## History
-The project was origanlly done about two years ago in C# WPF.
+The project was originally done about two years ago in C# WPF.
 
 ## Game Description:
 A board game that requires two players to outwit each other through strategy. 
