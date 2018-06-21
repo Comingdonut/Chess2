@@ -9,7 +9,6 @@
 import Foundation
 
 enum Color {
-    case None
     case White
     case Black
 }

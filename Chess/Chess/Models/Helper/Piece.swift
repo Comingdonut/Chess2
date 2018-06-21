@@ -9,7 +9,6 @@
 import Foundation
 
 enum Piece: String {
-    case None = ""
     case Pawn = "Pawn"
     case Knight = "Knight"
     case Bishop = "Bishop"

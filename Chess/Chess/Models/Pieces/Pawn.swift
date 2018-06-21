@@ -18,7 +18,7 @@ class Pawn: ChessPiece {
     var canEnPassant: Bool
     var promote: Bool
     
-    init(paint: Color) {
+    init(_ paint: Color) {
         letter = "P"
         moveAmount = 2
         type = Piece.Pawn

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D156BF5120D9A579002ED6DC /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BF5020D9A579002ED6DC /* PlayerManager.swift */; };
+		D156BF5320D9A6F8002ED6DC /* PieceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BF5220D9A6F8002ED6DC /* PieceManager.swift */; };
+		D1A4321C20DAB77E0082BE41 /* MovementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4321B20DAB77E0082BE41 /* MovementManager.swift */; };
 		D1BB340D20D99A2B00CADFE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB340C20D99A2B00CADFE2 /* AppDelegate.swift */; };
 		D1BB340F20D99A2B00CADFE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1BB340E20D99A2B00CADFE2 /* ViewController.swift */; };
 		D1BB341220D99A2B00CADFE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1BB341020D99A2B00CADFE2 /* Main.storyboard */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D156BF5020D9A579002ED6DC /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
+		D156BF5220D9A6F8002ED6DC /* PieceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceManager.swift; sourceTree = "<group>"; };
+		D1A4321B20DAB77E0082BE41 /* MovementManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementManager.swift; sourceTree = "<group>"; };
 		D1BB340920D99A2B00CADFE2 /* Chess.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chess.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1BB340C20D99A2B00CADFE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1BB340E20D99A2B00CADFE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +65,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D156BF4F20D9A53A002ED6DC /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				D156BF5020D9A579002ED6DC /* PlayerManager.swift */,
+				D156BF5220D9A6F8002ED6DC /* PieceManager.swift */,
+				D1A4321B20DAB77E0082BE41 /* MovementManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		D1BB340020D99A2B00CADFE2 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +110,7 @@
 		D1BB341E20D99A7100CADFE2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D156BF4F20D9A53A002ED6DC /* Managers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,6 +250,7 @@
 				D1BB343520D99A7100CADFE2 /* Piece.swift in Sources */,
 				D1BB343720D99A7100CADFE2 /* King.swift in Sources */,
 				D1BB343C20D99A7100CADFE2 /* Player.swift in Sources */,
+				D156BF5120D9A579002ED6DC /* PlayerManager.swift in Sources */,
 				D1BB340D20D99A2B00CADFE2 /* AppDelegate.swift in Sources */,
 				D1BB343820D99A7100CADFE2 /* Knight.swift in Sources */,
 				D1BB343120D99A7100CADFE2 /* Board.swift in Sources */,
@@ -241,6 +259,8 @@
 				D1BB343920D99A7100CADFE2 /* Pawn.swift in Sources */,
 				D1BB343220D99A7100CADFE2 /* BoardSpace.swift in Sources */,
 				D1BB343B20D99A7100CADFE2 /* Rook.swift in Sources */,
+				D156BF5320D9A6F8002ED6DC /* PieceManager.swift in Sources */,
+				D1A4321C20DAB77E0082BE41 /* MovementManager.swift in Sources */,
 				D1BB343420D99A7100CADFE2 /* Color.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

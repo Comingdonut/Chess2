@@ -18,7 +18,7 @@ class BoardSpace: CustomStringConvertible {
         piece = nil
     }
     
-    init(piece: ChessPiece) {
+    init(_ piece: ChessPiece) {
         isEmpty = false
         self.piece = piece
     }

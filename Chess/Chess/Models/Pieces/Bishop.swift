@@ -14,7 +14,7 @@ class Bishop: ChessPiece {
     var type: Piece
     var paint: Color
     
-    init(paint: Color) {
+    init(_ paint: Color) {
         letter = "B"
         moveAmount = 7
         type = Piece.Bishop

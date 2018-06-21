@@ -14,7 +14,7 @@ class Queen: ChessPiece {
     var type: Piece
     var paint: Color
     
-    init(paint: Color) {
+    init(_ paint: Color) {
         letter = "Q"
         moveAmount = 7
         type = Piece.Queen

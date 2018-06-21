@@ -16,7 +16,7 @@ class Rook: ChessPiece {
     var hasMoved: Bool
     var canCastle: Bool
     
-    init(paint: Color) {
+    init(_ paint: Color) {
         letter = "R"
         moveAmount = 7
         type = Piece.Rook
