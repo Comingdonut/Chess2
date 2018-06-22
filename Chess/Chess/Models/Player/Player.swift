@@ -13,11 +13,6 @@ class Player {
     var color: Color;
     // TODO: Add Time History
     // TODO: Add Move History
-    init()
-    {
-        name = "";
-        color = Color.None;
-    }
     init(_ name: String, _ color: Color) {
         self.name = name;
         self.color = color;
