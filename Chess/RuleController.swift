@@ -22,4 +22,9 @@ class RuleController: UIViewController {
         ruleTitle.text = rTitle;
         ruleDetails.text = rDetails;
     }
+    
+    @IBAction func dismissToRules(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
 }

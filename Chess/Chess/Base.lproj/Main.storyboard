@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Main Menu Controller-->
+        <!--Main Menu-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainMenuController" customModule="Chess" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Main Menu" id="BYZ-38-t0r" customClass="MainMenuController" customModule="Chess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,7 +36,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Iui-Hl-0wz" kind="presentation" modalTransitionStyle="flipHorizontal" id="E4a-8R-UqG"/>
+                                    <segue destination="Iui-Hl-0wz" kind="presentation" modalTransitionStyle="partialCurl" id="E4a-8R-UqG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chess" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kgf-8s-6e9" userLabel="Title">
@@ -55,10 +55,10 @@
             </objects>
             <point key="canvasLocation" x="48.799999999999997" y="97.601199400299862"/>
         </scene>
-        <!--Rules Controller-->
+        <!--Rules Menu-->
         <scene sceneID="wjV-s2-HZl">
             <objects>
-                <viewController id="Iui-Hl-0wz" customClass="RulesController" customModule="Chess" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Rules Menu" id="Iui-Hl-0wz" customClass="RulesController" customModule="Chess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3CW-jf-fQh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,7 +103,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="presentation" modalTransitionStyle="partialCurl" id="kwP-CR-ixm"/>
+                                    <action selector="dismissToMainMenu:" destination="Iui-Hl-0wz" eventType="touchUpInside" id="diC-4D-fB1"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PGV-ys-UVT">
@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="48.799999999999997" y="867.61619190404804"/>
         </scene>
-        <!--Rule Controller-->
+        <!--Rules Detail-->
         <scene sceneID="NVV-1I-jyd">
             <objects>
-                <viewController id="Asg-ar-Od0" customClass="RuleController" customModule="Chess" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Rules Detail" id="Asg-ar-Od0" customClass="RuleController" customModule="Chess" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FHL-28-nES">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,7 +158,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Iui-Hl-0wz" kind="presentation" modalTransitionStyle="crossDissolve" id="bLz-GD-3zC"/>
+                                    <action selector="dismissToRules:" destination="Asg-ar-Od0" eventType="touchUpInside" id="aiN-ac-9Cl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -177,6 +177,5 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="YbE-Es-TMC"/>
-        <segue reference="bLz-GD-3zC"/>
     </inferredMetricsTieBreakers>
 </document>

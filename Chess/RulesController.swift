@@ -13,10 +13,6 @@ class RulesController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if ((sender as? MainMenuController) != nil) {
-            
-        }
-        
         let controller = segue.destination as! RuleController
         
         if segue.identifier == "PieceMovement" {
@@ -42,5 +38,8 @@ class RulesController: UIViewController {
         }
     }
     
+    @IBAction func dismissToMainMenu(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
     
 }
