@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B5EADC2220F6A9DD005B295A /* RulesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EADC2120F6A9DD005B295A /* RulesController.swift */; };
-		B5EADC2420F6ABC9005B295A /* RuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EADC2320F6ABC9005B295A /* RuleController.swift */; };
-		B5EADC2620F6BA5F005B295A /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5EADC2520F6BA5F005B295A /* MainMenuController.swift */; };
+		B517F09A20F7F23100CA0AA5 /* RulesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517F09920F7F23100CA0AA5 /* RulesController.swift */; };
+		B517F09C20F7F24200CA0AA5 /* RuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517F09B20F7F24200CA0AA5 /* RuleController.swift */; };
+		B517F09E20F7F24F00CA0AA5 /* MainMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517F09D20F7F24F00CA0AA5 /* MainMenuController.swift */; };
+		B517F0A020F7F27100CA0AA5 /* PlayerNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517F09F20F7F27100CA0AA5 /* PlayerNameController.swift */; };
+		B517F0A220F7F27A00CA0AA5 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B517F0A120F7F27A00CA0AA5 /* GameController.swift */; };
 		D156BF5120D9A579002ED6DC /* PlayerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BF5020D9A579002ED6DC /* PlayerManager.swift */; };
 		D156BF5320D9A6F8002ED6DC /* PieceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D156BF5220D9A6F8002ED6DC /* PieceManager.swift */; };
 		D1A4321C20DAB77E0082BE41 /* MovementManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A4321B20DAB77E0082BE41 /* MovementManager.swift */; };
@@ -33,9 +35,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B5EADC2120F6A9DD005B295A /* RulesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesController.swift; sourceTree = SOURCE_ROOT; };
-		B5EADC2320F6ABC9005B295A /* RuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RuleController.swift; sourceTree = SOURCE_ROOT; };
-		B5EADC2520F6BA5F005B295A /* MainMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = SOURCE_ROOT; };
+		B517F09920F7F23100CA0AA5 /* RulesController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesController.swift; sourceTree = "<group>"; };
+		B517F09B20F7F24200CA0AA5 /* RuleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleController.swift; sourceTree = "<group>"; };
+		B517F09D20F7F24F00CA0AA5 /* MainMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuController.swift; sourceTree = "<group>"; };
+		B517F09F20F7F27100CA0AA5 /* PlayerNameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerNameController.swift; sourceTree = "<group>"; };
+		B517F0A120F7F27A00CA0AA5 /* GameController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
 		D156BF5020D9A579002ED6DC /* PlayerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerManager.swift; sourceTree = "<group>"; };
 		D156BF5220D9A6F8002ED6DC /* PieceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieceManager.swift; sourceTree = "<group>"; };
 		D1A4321B20DAB77E0082BE41 /* MovementManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovementManager.swift; sourceTree = "<group>"; };
@@ -175,9 +179,11 @@
 		D1BB343020D99A7100CADFE2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B5EADC2120F6A9DD005B295A /* RulesController.swift */,
-				B5EADC2320F6ABC9005B295A /* RuleController.swift */,
-				B5EADC2520F6BA5F005B295A /* MainMenuController.swift */,
+				B517F09920F7F23100CA0AA5 /* RulesController.swift */,
+				B517F09B20F7F24200CA0AA5 /* RuleController.swift */,
+				B517F09D20F7F24F00CA0AA5 /* MainMenuController.swift */,
+				B517F09F20F7F27100CA0AA5 /* PlayerNameController.swift */,
+				B517F0A120F7F27A00CA0AA5 /* GameController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -258,22 +264,24 @@
 				D1BB340F20D99A2B00CADFE2 /* ViewController.swift in Sources */,
 				D1BB343520D99A7100CADFE2 /* Piece.swift in Sources */,
 				D1BB343720D99A7100CADFE2 /* King.swift in Sources */,
+				B517F0A020F7F27100CA0AA5 /* PlayerNameController.swift in Sources */,
 				D1BB343C20D99A7100CADFE2 /* Player.swift in Sources */,
+				B517F09E20F7F24F00CA0AA5 /* MainMenuController.swift in Sources */,
 				D156BF5120D9A579002ED6DC /* PlayerManager.swift in Sources */,
+				B517F0A220F7F27A00CA0AA5 /* GameController.swift in Sources */,
 				D1BB340D20D99A2B00CADFE2 /* AppDelegate.swift in Sources */,
 				D1BB343820D99A7100CADFE2 /* Knight.swift in Sources */,
+				B517F09A20F7F23100CA0AA5 /* RulesController.swift in Sources */,
 				D1BB343120D99A7100CADFE2 /* Board.swift in Sources */,
-				B5EADC2620F6BA5F005B295A /* MainMenuController.swift in Sources */,
-				B5EADC2220F6A9DD005B295A /* RulesController.swift in Sources */,
 				D1BB343620D99A7100CADFE2 /* Bishop.swift in Sources */,
 				D1BB343320D99A7100CADFE2 /* ChessPiece.swift in Sources */,
 				D1BB343920D99A7100CADFE2 /* Pawn.swift in Sources */,
 				D1BB343220D99A7100CADFE2 /* BoardSpace.swift in Sources */,
-				B5EADC2420F6ABC9005B295A /* RuleController.swift in Sources */,
 				D1BB343B20D99A7100CADFE2 /* Rook.swift in Sources */,
 				D156BF5320D9A6F8002ED6DC /* PieceManager.swift in Sources */,
 				D1A4321C20DAB77E0082BE41 /* MovementManager.swift in Sources */,
 				D1BB343420D99A7100CADFE2 /* Color.swift in Sources */,
+				B517F09C20F7F24200CA0AA5 /* RuleController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
