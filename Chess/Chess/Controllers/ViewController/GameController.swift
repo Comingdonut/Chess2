@@ -11,6 +11,8 @@ import UIKit
 
 class GameController: UIViewController {
     
+    @IBOutlet var playerLabel: UILabel!
+    
     var playerM = PlayerManager()
     var board = Board()
     
