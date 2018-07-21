@@ -12,10 +12,12 @@ import UIKit
 class GameController: UIViewController {
     
     var playerM = PlayerManager()
+    var board = Board()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // TODO: Initialize board through a text file
+        // TODO: (Optional) Save/Load game through text file
     }
     
     @IBAction func dismissToNames(_ sender: Any) {

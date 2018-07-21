@@ -10,14 +10,14 @@ import Foundation
 
 class Board {
     
-    var gameBoard: [[BoardSpace]]
+    var board: [[BoardSpace]]
     
     init() {
-        gameBoard = Array(repeating: Array(repeating: BoardSpace(), count: 8), count: 8)
+        board = Array(repeating: Array(repeating: BoardSpace(), count: 8), count: 8)
     }
     
     func resetBoard() {
-        gameBoard = Array(repeating: Array(repeating: BoardSpace(), count: 8), count: 8)
+        board = Array(repeating: Array(repeating: BoardSpace(), count: 8), count: 8)
     }
     
 }

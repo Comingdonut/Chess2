@@ -75,6 +75,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B5860B4820F941B1005D1F32 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B517F09920F7F23100CA0AA5 /* RulesController.swift */,
+				B517F09B20F7F24200CA0AA5 /* RuleController.swift */,
+				B517F09D20F7F24F00CA0AA5 /* MainMenuController.swift */,
+				B517F09F20F7F27100CA0AA5 /* PlayerNameController.swift */,
+				B517F0A120F7F27A00CA0AA5 /* GameController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		D156BF4F20D9A53A002ED6DC /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -106,7 +118,6 @@
 			children = (
 				D1BB341E20D99A7100CADFE2 /* Controllers */,
 				D1BB341F20D99A7100CADFE2 /* Models */,
-				D1BB343020D99A7100CADFE2 /* Views */,
 				D1BB340C20D99A2B00CADFE2 /* AppDelegate.swift */,
 				D1BB340E20D99A2B00CADFE2 /* ViewController.swift */,
 				D1BB341020D99A2B00CADFE2 /* Main.storyboard */,
@@ -120,6 +131,7 @@
 		D1BB341E20D99A7100CADFE2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B5860B4820F941B1005D1F32 /* ViewController */,
 				D156BF4F20D9A53A002ED6DC /* Managers */,
 			);
 			path = Controllers;
@@ -174,18 +186,6 @@
 				D1BB342F20D99A7100CADFE2 /* Player.swift */,
 			);
 			path = Player;
-			sourceTree = "<group>";
-		};
-		D1BB343020D99A7100CADFE2 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				B517F09920F7F23100CA0AA5 /* RulesController.swift */,
-				B517F09B20F7F24200CA0AA5 /* RuleController.swift */,
-				B517F09D20F7F24F00CA0AA5 /* MainMenuController.swift */,
-				B517F09F20F7F27100CA0AA5 /* PlayerNameController.swift */,
-				B517F0A120F7F27A00CA0AA5 /* GameController.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
