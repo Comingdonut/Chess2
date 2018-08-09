@@ -13,11 +13,7 @@ class Board {
     var board: [[BoardSpace]]
     
     init() {
-        board = Array(repeating: Array(repeating: BoardSpace(), count: 8), count: 8)
-    }
-    
-    func resetBoard() {
-        board = Array(repeating: Array(repeating: BoardSpace(), count: 8), count: 8)
+        board = []
     }
     
 }

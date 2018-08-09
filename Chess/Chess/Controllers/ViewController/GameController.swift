@@ -11,15 +11,53 @@ import UIKit
 
 class GameController: UIViewController {
     
-    @IBOutlet var playerLabel: UILabel!
+    @IBOutlet weak var playerLabel: UILabel!
+    @IBOutlet weak var boardView: UIStackView!
     
+    var fileM = FileManager()
     var playerM = PlayerManager()
-    var board = Board()
+    var b = Board()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // TODO: Initialize board through a text file
+        setupBoardFromTextFile()
+        setupBoardView()
         // TODO: (Optional) Save/Load game through text file
+    }
+    
+    func setupBoardFromTextFile() {
+        let setup = fileM.loadFile(file: "board")
+        var row: [BoardSpace] = []
+        var columnInRowCount = 0;
+        for chessPiece in setup {
+            if !chessPiece.isEmpty {
+                let details = chessPiece.components(separatedBy: "|")
+                if details.count > 1 {
+                    let paint = fileM.set(color: details[1])
+                    row.append(BoardSpace(fileM.set(piece: details[2], colored: paint)))
+                    columnInRowCount += 1
+                }
+                else {
+                    row.append(BoardSpace())
+                    columnInRowCount += 1
+                }
+            }
+            if columnInRowCount == 8 {
+                b.board.append(row)
+                row = []
+                columnInRowCount = 0
+            }
+        }
+    }
+    
+    func setupBoardView() {
+        for x in stride(from: 1, to: boardView.subviews.count, by: 1) {
+            let rowView = (boardView.subviews[x] as! UIStackView)
+            for y in stride(from: 1, to: rowView.subviews.count, by: 1) {
+                let button = rowView.subviews[y] as! UIButton;
+                button.setTitle(b.board[x-1][y-1].description, for: .normal)
+            }
+        }
     }
     
     @IBAction func dismissToNames(_ sender: Any) {

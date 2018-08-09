@@ -14,7 +14,7 @@ class BoardSpace: CustomStringConvertible {
     var piece: ChessPiece?
     
     init() {
-        self.isEmpty = true
+        isEmpty = true
         piece = nil
     }
     
@@ -28,6 +28,6 @@ class BoardSpace: CustomStringConvertible {
         if piece == nil {
             return ""
         }
-        return piece!.type.Name()
+        return "\(piece!.letter)"
     }
 }
