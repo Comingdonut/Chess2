@@ -1,4 +1,4 @@
-# Chess-User-Interface
+# Chess-User-Interface (Hiatus)
 Solo Project (This was done for class, but after 2 years I restarted for fun.)
 
 ## Project Objective
